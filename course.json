@@ -29,7 +29,9 @@
           "path": "instruction/the-state-event-loop/the-state-event-loop.md",
           "id": "6320c343-4f45-454c-9fe1-b53307423ae7",
           "state": "published",
-          "description": "Describe the relationship between user events, state updates, and the React re-render cycle."
+          "interactions": [],
+          "description": "Describe the relationship between user events, state updates, and the React re-render cycle.",
+          "commit": "54d025c0ea4181c7f25b2dd7313ed922b4d91a57"
         },
         {
           "title": "Understanding useState as an Event Listener",
