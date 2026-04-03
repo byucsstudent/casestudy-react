@@ -1,0 +1,264 @@
+{
+  "title": "Case Study: Event driven programming using React",
+  "description": "The React web framework uses asynchronous events to create websites that are responsive to user interactions in a performant manner. We will use React as a case study on using asynchronous event driven programing to create applications. First we will study in depth the event driven state model for React that underlies its hook model with real examples. Next we will dive into the the code that React uses to implement it's event model. Finally we will demonstrate how to extend React's event model to provide additional functionality. You will then create a capstone project where you create a pull request to the React team with a proposed useful extension.",
+  "modules": [
+    {
+      "title": "The React Event-Driven State Model",
+      "description": "Explores how React uses events to manage application state through hooks and the reconciliation process.",
+      "topics": [
+        {
+          "title": "Overview",
+          "description": "Course introduction and objectives.",
+          "path": "README.md",
+          "type": "instruction",
+          "state": "published",
+          "id": "2d166c98-5163-4144-aed5-7b81e4f99d5b"
+        },
+        {
+          "title": "Introduction to Asynchronous Events in React",
+          "description": "Explain the fundamental concepts of asynchronous event-driven programming and how they differ from synchronous execution in the context of React.",
+          "path": "instruction/introduction-to-asynchronous-events-in-react/introduction-to-asynchronous-events-in-react.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "1e3df43c-7896-4c2b-8dbb-cc217dcadf6c"
+        },
+        {
+          "title": "The State-Event Loop",
+          "description": "Describe the relationship between user events, state updates, and the React re-render cycle.",
+          "path": "instruction/the-state-event-loop/the-state-event-loop.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "6320c343-4f45-454c-9fe1-b53307423ae7"
+        },
+        {
+          "title": "Understanding useState as an Event Listener",
+          "description": "Detail how the useState hook acts as a mechanism for responding to event-driven data changes.",
+          "path": "instruction/understanding-usestate-as-an-event-listener/understanding-usestate-as-an-event-listener.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "f1ae9d46-cab3-4315-8e00-9dce27e19a8e"
+        },
+        {
+          "title": "The Role of useReducer in Complex Event Handling",
+          "description": "Explain how useReducer provides a structured way to handle complex state transitions triggered by multiple event types.",
+          "path": "instruction/the-role-of-usereducer-in-complex-event-handling/the-role-of-usereducer-in-complex-event-handling.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "a836dad7-e123-4407-b8fc-4a36adb03a06"
+        },
+        {
+          "title": "Side Effects and the useEffect Hook",
+          "description": "Discuss how useEffect allows developers to synchronize external systems with the internal event-driven state of a React component.",
+          "path": "instruction/side-effects-and-the-useeffect-hook/side-effects-and-the-useeffect-hook.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "61f566a0-3fd0-4ac1-bf6b-9da0bb6bcab1"
+        },
+        {
+          "title": "Event Propagation and Bubbling in React",
+          "description": "Analyze how React handles event bubbling and capturing within its component tree structure.",
+          "path": "instruction/event-propagation-and-bubbling-in-react/event-propagation-and-bubbling-in-react.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "4cac298b-dd0f-442e-9335-fee571733c48"
+        },
+        {
+          "title": "Controlled versus Uncontrolled Components",
+          "description": "Compare how React manages form events through controlled inputs versus letting the DOM handle them via uncontrolled components.",
+          "path": "instruction/controlled-versus-uncontrolled-components/controlled-versus-uncontrolled-components.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "a877c4e7-eea0-4c94-8315-02c7f14356ab"
+        },
+        {
+          "title": "Handling User Input Events",
+          "description": "Provide a practical guide on managing keyboard, mouse, and touch events within a React application.",
+          "path": "instruction/handling-user-input-events/handling-user-input-events.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "c790200e-fdc7-4c15-bb60-85c3603e761a"
+        },
+        {
+          "title": "Batching State Updates for Performance",
+          "description": "Explain how React batches multiple state updates from a single event to optimize rendering performance.",
+          "path": "instruction/batching-state-updates-for-performance/batching-state-updates-for-performance.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "f64e2ee3-5d22-41b3-9748-446bfa45a069"
+        }
+      ]
+    },
+    {
+      "title": "Internal Implementation of the React Event System",
+      "description": "A deep dive into the source code and architectural decisions behind React's SyntheticEvent and the Scheduler.",
+      "topics": [
+        {
+          "title": "The Virtual DOM and Event Mapping",
+          "description": "Explain how React maps native browser events to its internal Virtual DOM representation.",
+          "path": "instruction/the-virtual-dom-and-event-mapping/the-virtual-dom-and-event-mapping.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "c76210d8-d4a3-4f9e-9796-e362338f85b5"
+        },
+        {
+          "title": "Deep Dive into SyntheticEvent",
+          "description": "Analyze the implementation of React's SyntheticEvent wrapper and its role in cross-browser compatibility.",
+          "path": "instruction/deep-dive-into-syntheticevent/deep-dive-into-syntheticevent.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "b31329c4-a097-4119-8f41-ee9e33f06614"
+        },
+        {
+          "title": "Event Delegation Mechanism in React",
+          "description": "Describe how React uses a single event listener at the root level to manage all events within the application.",
+          "path": "instruction/event-delegation-mechanism-in-react/event-delegation-mechanism-in-react.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "59be8d79-63f7-45c3-9132-767087f8d296"
+        },
+        {
+          "title": "The Fiber Architecture and Concurrent Mode",
+          "description": "Explain how the Fiber architecture enables React to pause and resume work, impacting how events are processed in Concurrent Mode.",
+          "path": "instruction/the-fiber-architecture-and-concurrent-mode/the-fiber-architecture-and-concurrent-mode.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "4888fee9-065b-486b-a694-08edc6b79cde"
+        },
+        {
+          "title": "How the React Scheduler Prioritizes Events",
+          "description": "Discuss the internal Scheduler and how it assigns different priorities to discrete events like clicks versus continuous events like scrolling.",
+          "path": "instruction/how-the-react-scheduler-prioritizes-events/how-the-react-scheduler-prioritizes-events.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "9e783914-bdfb-45d1-8c18-288eee9ef57f"
+        },
+        {
+          "title": "Intercepting the Event Rehydration Process",
+          "description": "Explore how React handles events that occur during the hydration of server-side rendered content.",
+          "path": "instruction/intercepting-the-event-rehydration-process/intercepting-the-event-rehydration-process.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "1f706031-bd9f-4467-93de-1257a9f991f8"
+        },
+        {
+          "title": "Native Events versus Synthetic Events",
+          "description": "Contrast the behavior and properties of native browser events with React's SyntheticEvent system.",
+          "path": "instruction/native-events-versus-synthetic-events/native-events-versus-synthetic-events.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "881fd53b-718b-497e-9388-06a0533dd4cc"
+        },
+        {
+          "title": "The Lifecycle of a React Event",
+          "description": "Trace the path of an event from the moment a user interacts with the browser to the execution of the React handler.",
+          "path": "instruction/the-lifecycle-of-a-react-event/the-lifecycle-of-a-react-event.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "016994d4-fe28-4ee3-b0fc-29bdfe538f41"
+        },
+        {
+          "title": "Debugging the Event Queue",
+          "description": "Provide techniques and tools for inspecting and debugging React's internal event queue and update triggers.",
+          "path": "instruction/debugging-the-event-queue/debugging-the-event-queue.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "9fce2a27-9a5f-4ada-a21a-4fff556f9755"
+        },
+        {
+          "title": "Memory Management in the Event System",
+          "description": "Explain how React manages memory and event pooling to prevent leaks in high-frequency event scenarios.",
+          "path": "instruction/memory-management-in-the-event-system/memory-management-in-the-event-system.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "899c2a35-f3f4-4ad5-823e-a15e621d01da"
+        }
+      ]
+    },
+    {
+      "title": "Extending React Events and Capstone Project",
+      "description": "Learn to extend the event model and apply your knowledge by proposing a real contribution to the React project.",
+      "topics": [
+        {
+          "title": "Creating Custom Event Hooks",
+          "description": "Demonstrate how to build reusable custom hooks that encapsulate complex event listener logic.",
+          "path": "instruction/creating-custom-event-hooks/creating-custom-event-hooks.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "cc688743-8787-47a8-85bc-8f47cead4631"
+        },
+        {
+          "title": "Implementing Global Event Emitters",
+          "description": "Explore patterns for integrating global event emitters with React's component-based event model.",
+          "path": "instruction/implementing-global-event-emitters/implementing-global-event-emitters.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "60c165fb-8ef5-4150-a84e-195480c4a3d9"
+        },
+        {
+          "title": "Integrating External State Stores with React Events",
+          "description": "Explain how libraries like Redux or Zustand bridge external event-driven stores with React's internal state system.",
+          "path": "instruction/integrating-external-state-stores-with-react-events/integrating-external-state-stores-with-react-events.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "a8028ec2-aac4-4564-80d7-0951ce78c0cc"
+        },
+        {
+          "title": "Optimizing High Frequency Events with Debouncing",
+          "description": "Provide a guide on using debouncing techniques to handle high-frequency events like window resizing or search inputs.",
+          "path": "instruction/optimizing-high-frequency-events-with-debouncing/optimizing-high-frequency-events-with-debouncing.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "e4b1ac06-4f36-47b2-ab3f-3dc1d91a36f1"
+        },
+        {
+          "title": "Throttling Event Handlers for Performance",
+          "description": "Explain the use of throttling to limit the execution rate of event handlers for performance-critical interactions.",
+          "path": "instruction/throttling-event-handlers-for-performance/throttling-event-handlers-for-performance.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "249c4f68-9626-46bd-b1d0-eb1f1cb04612"
+        },
+        {
+          "title": "Building a Custom Event Plugin for React",
+          "description": "Discuss the theoretical architecture for building a custom event plugin to extend React's core event capabilities.",
+          "path": "instruction/building-a-custom-event-plugin-for-react/building-a-custom-event-plugin-for-react.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "09ffeaa9-d070-4808-8be9-be14a82c7ddd"
+        },
+        {
+          "title": "Analyzing the React Source Code for Contribution",
+          "description": "Guide the learner through navigating the React repository to find the event-related logic for the purpose of contribution.",
+          "path": "instruction/analyzing-the-react-source-code-for-contribution/analyzing-the-react-source-code-for-contribution.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "a4ecb252-a759-4ff9-ba83-5012ffad3e13"
+        },
+        {
+          "title": "Identifying Potential Enhancements in React Events",
+          "description": "Help learners brainstorm and identify missing features or performance optimizations in the current React event model.",
+          "path": "instruction/identifying-potential-enhancements-in-react-events/identifying-potential-enhancements-in-react-events.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "aa518232-0d0e-4e33-b8c2-762e5e2952af"
+        },
+        {
+          "title": "Preparing a Pull Request for React Core",
+          "description": "Explain the technical and community requirements for submitting a pull request to the React project.",
+          "path": "instruction/preparing-a-pull-request-for-react-core/preparing-a-pull-request-for-react-core.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "9810a987-1a9c-4c6f-a210-ab0fac19f6cf"
+        },
+        {
+          "title": "Capstone Project Proposing a React Event Extension",
+          "description": "Synthesize all course learnings to create a pull request or a detailed proposal for a useful extension to the React event model.",
+          "path": "instruction/capstone-project-proposing-a-react-event-extension/capstone-project-proposing-a-react-event-extension.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "7c693aa8-cc02-4ae0-8fbe-8d3205d6fc01"
+        }
+      ]
+    }
+  ]
+}
