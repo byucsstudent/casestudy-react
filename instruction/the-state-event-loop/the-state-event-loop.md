@@ -91,13 +91,13 @@ const handleIncrement = () => {
 *   **Use local variables:** If you need the new value immediately within the same event handler, calculate it and store it in a constant.
 *   **Use `useEffect`:** If you need to perform a side effect based on the updated state, use the `useEffect` hook with the state variable in the dependency array.
 
-```javascript
-const handleIncrement = () => {
-  const nextCount = count + 1;
-  setCount(nextCount);
-  performAction(nextCount); // Uses the correct, updated value
-};
-```
+    ```javascript
+    const handleIncrement = () => {
+      const nextCount = count + 1;
+      setCount(nextCount);
+      performAction(nextCount); // Uses the correct, updated value
+    };
+    ```
 
 ### 2. Stale Closures in Asynchronous Logic
 
@@ -143,15 +143,60 @@ When a user event updates state in a parent component, the entire component tree
 
 **The Solution**
 *   **React.memo:** Wrap child components in `memo` to prevent a re-render unless their props have changed.
+
+    ```jsx
+    import React, { useState } from 'react';
+
+    // This component is wrapped in memo. 
+    // It will only re-render if its props (title) change.
+    const ExpensiveComponent = React.memo(({ title }) => {
+      console.log("Child rendered");
+      return (
+        <h3>{title}</h3>
+      );
+    });
+
+    export default function App() {
+      const [count, setCount] = useState(0);
+      const [title, setTitle] = useState("Hello World");
+
+      return (
+        <div style={{ padding: '20px' }}>
+          <h2>Parent State: {count}</h2>
+          
+          {/* 
+            User Event: Clicking this button updates state.
+            Update Cycle: setCount triggers a re-render of the App component.
+            Memoization: Because 'title' hasn't changed, ExpensiveComponent skips re-rendering.
+          */}
+          <button onClick={() => setCount(count + 1)}>
+            Increment Counter
+          </button>
+
+          {/* 
+            User Event: This button changes the prop passed to the child.
+            Update Cycle: setTitle triggers a re-render.
+            Memoization: React detects the 'title' prop is different and re-renders the child.
+          */}
+          <button onClick={() => setTitle("Updated Title " + Math.random())}>
+            Change Title
+          </button>
+
+          <ExpensiveComponent title={title} />
+        </div>
+      );
+    }
+    ```
+
 *   **useCallback:** When passing functions as props to memoized children, wrap the functions in `useCallback`. This ensures the function reference remains stable across renders, preventing the child from detecting a "prop change."
 
-```javascript
-const memoizedCallback = useCallback(() => {
-  doSomething(a, b);
-}, [a, b]); // Only changes if a or b change
+    ```javascript
+    const memoizedCallback = useCallback(() => {
+      doSomething(a, b);
+    }, [a, b]); // Only changes if a or b change
 
-return <ExpensiveChild onClick={memoizedCallback} />;
-```
+    return <ExpensiveChild onClick={memoizedCallback} />;
+    ```
 
 
 ### 5. Infinite Render Loops
@@ -170,13 +215,13 @@ useEffect(() => {
 *   **Conditional Logic:** Ensure state updates inside `useEffect` are wrapped in conditional checks.
 *   **Correct Dependencies:** Audit dependency arrays to ensure you aren't listening to the same value you are modifying, or use the functional update pattern to remove the state variable from the dependency array.
 
-```javascript
-useEffect(() => {
-  if (count < 10) {
-    setCount(prev => prev + 1);
-  }
-}, []); // Empty dependency or logic-based dependency
-```
+    ```javascript
+    useEffect(() => {
+      if (count < 10) {
+        setCount(prev => prev + 1);
+      }
+    }, []); // Empty dependency or logic-based dependency
+    ```
 
 
 ## Summary
