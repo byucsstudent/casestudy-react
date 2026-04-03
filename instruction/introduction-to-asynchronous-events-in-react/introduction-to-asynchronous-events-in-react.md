@@ -4,6 +4,9 @@ In the world of modern web development, responsiveness is the hallmark of a high
 
 React addresses this challenge by leveraging an asynchronous, event-driven architecture. To master React, one must move beyond thinking of code as a linear sequence of instructions and begin viewing it as a series of reactions to events. This shift in perspective is the foundation of the React Event-Driven State Model.
 
+![synchVsAsynch.png](synchVsAsynch.png)
+
+
 ### The Synchronous Execution Model
 
 To understand the power of asynchronous events, we must first look at the limitations of synchronous execution. In a purely synchronous environment, code is executed line by line. Each operation must complete before the next one begins. 
