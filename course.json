@@ -31,7 +31,7 @@
           "state": "published",
           "interactions": [],
           "description": "Describe the relationship between user events, state updates, and the React re-render cycle.",
-          "commit": "54d025c0ea4181c7f25b2dd7313ed922b4d91a57"
+          "commit": "8ab97365279abc67e56e48aff40879636154c081"
         },
         {
           "title": "Understanding useState as an Event Listener",
