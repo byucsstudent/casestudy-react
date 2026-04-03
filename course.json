@@ -19,7 +19,9 @@
           "path": "instruction/introduction-to-asynchronous-events-in-react/introduction-to-asynchronous-events-in-react.md",
           "id": "1e3df43c-7896-4c2b-8dbb-cc217dcadf6c",
           "state": "published",
-          "description": "Explain the fundamental concepts of asynchronous event-driven programming and how they differ from synchronous execution in the context of React."
+          "interactions": [],
+          "description": "Explain the fundamental concepts of asynchronous event-driven programming and how they differ from synchronous execution in the context of React.",
+          "commit": "449e176a24c788410e1b8db4d9910ee5e7d4f2b5"
         },
         {
           "title": "The State-Event Loop",
