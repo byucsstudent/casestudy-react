@@ -4,6 +4,8 @@ At the heart of every dynamic React application lies a continuous, rhythmic cycl
 
 ## The Conceptual Cycle
 
+![stateEventLoop.png](stateEventLoop.png)
+
 The State-Event Loop can be visualized as a four-stage process that repeats every time a user interacts with your application. This cycle ensures that the view (what the user sees) always stays in sync with the model (the underlying data).
 
 1.  **Event Capture:** The user performs an action, such as clicking a button, typing in a text field, or hovering over an element. React’s synthetic event system captures this interaction.
