@@ -52,6 +52,7 @@ React’s event model is built on top of the standard JavaScript Event Loop. The
 
 React wraps these native browser events in its own system called **SyntheticEvents**. This ensures that events behave identically across different browsers and allows React to perform optimizations like event pooling and automatic batching. In recent versions of React, multiple state updates triggered within the same asynchronous event (like a `fetch` callback) are batched together into a single re-render, significantly improving performance.
 
+
 ### Common Challenges and Solutions
 
 Transitioning to an asynchronous mindset introduces specific hurdles that developers must learn to navigate.
