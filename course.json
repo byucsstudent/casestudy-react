@@ -21,7 +21,7 @@
           "state": "published",
           "interactions": [],
           "description": "Explain the fundamental concepts of asynchronous event-driven programming and how they differ from synchronous execution in the context of React.",
-          "commit": "449e176a24c788410e1b8db4d9910ee5e7d4f2b5"
+          "commit": "166ccc5ceecab4e955f975bbde6c01e86793fbb7"
         },
         {
           "title": "The State-Event Loop",
