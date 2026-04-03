@@ -96,7 +96,10 @@ React wraps these native browser events in its own system called **SyntheticEven
 
 ## Common Challenges and Solutions
 
-Transitioning to an asynchronous mindset introduces specific hurdles that developers must learn to navigate.
+Transitioning to an asynchronous mindset introduces specific hurdles that developers must learn to navigate. While synchronous execution processes code in a linear, blocking sequence, React leverages an asynchronous, event-driven model to maintain a responsive user interface. 
+
+This paradigm shift requires developers to move away from the expectation that state updates are immediate or that operations will always resolve in the exact order they were triggered. Navigating this transition often reveals friction points where the timing of the JavaScript event loop intersects with React’s rendering lifecycle. The following examples explore common challenges—such as stale closures, race conditions, and managing concurrent side effects—offering solutions to ensure predictable behavior in a non-blocking environment.
+
 
 ### Problem 1: The Race Condition Problem in React
 
