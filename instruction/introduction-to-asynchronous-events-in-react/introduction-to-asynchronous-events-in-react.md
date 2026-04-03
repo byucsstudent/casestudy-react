@@ -46,6 +46,47 @@ function Counter() {
 
 If you click the button, the console will log `0`, even though the UI will eventually update to display `1`. This happens because `handleClick` is an event handler that sees a "snapshot" of the state from the moment the render occurred. The `setCount` call is an asynchronous request to change the state for the *next* render. This prevents the UI from being in an inconsistent state halfway through a function's execution.
 
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User
+    participant Browser as Browser Event Loop
+    participant Handler as onClick Handler (Sync)
+    participant React as React State Engine (Async)
+    participant UI as Counter Component (UI)
+
+    User->>Browser: Clicks "Increment" button
+    Browser->>Handler: Executes callback function
+    
+    rect rgb(240, 240, 240)
+        Note over Handler: Synchronous Execution Block
+        Handler->>React: setCount(prev + 1)
+        Note right of React: Update is queued, not applied yet
+        Handler->>Handler: console.log(count) 
+        Note over Handler: Logs OLD value (closure)
+    end
+
+    Handler-->>Browser: Handler execution completes
+    
+    rect rgb(220, 235, 255)
+        Note over React: Asynchronous Processing
+        React->>React: Batch updates & Re-calculate State
+        React->>UI: Trigger Re-render with new count
+        UI->>Browser: Update DOM
+    end
+
+    Browser-->>User: Displays updated count
+```
+
+#### Key Concepts Demonstrated:
+
+1.  **Synchronous Execution (Steps 2-5):** The `onClick` function runs to completion immediately upon the user's action. During this time, the JavaScript engine is occupied and cannot process other UI tasks.
+2.  **Asynchronous State Update (Step 4):** Calling `setCount` does not change the variable in the current scope. Instead, it signals to React that an update is needed.
+3.  **Event-Driven Trigger:** The entire cycle is initiated by a DOM event, demonstrating the event-driven nature of modern web interfaces.
+4.  **The Render Phase (Steps 7-9):** React waits until the synchronous code has finished (the "stack" is empty) before processing the state queue and updating the Virtual DOM to reflect the change.
+
+
 ## The Event Loop and React’s Reconciliation
 
 React’s event model is built on top of the standard JavaScript Event Loop. The browser continuously checks if there are tasks in the queue (like click events or fetch responses). When a click occurs, the browser executes the associated JavaScript. 
