@@ -18,7 +18,9 @@
           "type": "instruction",
           "path": "instruction/asynchronous-browser-events/asynchronous-browser-events.md",
           "id": "b66bd4ff-7a7d-480e-a5cb-5aa6bd13ef60",
-          "description": "Cover how the browser and V8 process the asynchronous events. Include a discussion on the stack frame, web apis, macro and micro tasks, and the rendering loop."
+          "interactions": [],
+          "description": "Cover how the browser and V8 process the asynchronous events. Include a discussion on the stack frame, web apis, macro and micro tasks, and the rendering loop.",
+          "commit": "b5397f62254e3600567bfc17dc470455caa07b5e"
         },
         {
           "title": "Introduction to Asynchronous Events in React",
