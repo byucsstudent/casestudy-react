@@ -14,6 +14,13 @@
           "description": "Course introduction and objectives."
         },
         {
+          "title": "Asynchronous Browser Events",
+          "type": "instruction",
+          "path": "instruction/asynchronous-browser-events/asynchronous-browser-events.md",
+          "id": "b66bd4ff-7a7d-480e-a5cb-5aa6bd13ef60",
+          "description": "Cover how the browser and V8 process the asynchronous events. Include a discussion on the stack frame, web apis, macro and micro tasks, and the rendering loop."
+        },
+        {
           "title": "Introduction to Asynchronous Events in React",
           "type": "instruction",
           "path": "instruction/introduction-to-asynchronous-events-in-react/introduction-to-asynchronous-events-in-react.md",
@@ -88,13 +95,6 @@
           "id": "f64e2ee3-5d22-41b3-9748-446bfa45a069",
           "state": "stub",
           "description": "Explain how React batches multiple state updates from a single event to optimize rendering performance."
-        },
-        {
-          "title": "Asynchronous Browser Events",
-          "type": "instruction",
-          "path": "instruction/asynchronous-browser-events/asynchronous-browser-events.md",
-          "id": "b66bd4ff-7a7d-480e-a5cb-5aa6bd13ef60",
-          "description": "Cover how the browser and V8 process the asynchronous events. Include a discussion on the stack frame, web apis, macro and micro tasks, and the rendering loop."
         }
       ]
     },
