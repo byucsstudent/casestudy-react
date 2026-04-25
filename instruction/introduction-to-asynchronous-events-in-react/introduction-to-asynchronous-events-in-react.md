@@ -48,6 +48,8 @@ If you click the button, the console will log `0`, even though the UI will event
 
 
 ```mermaid
+%%{init: {'theme': 'neutral'}}%%
+
 sequenceDiagram
     autonumber
     actor User
@@ -59,7 +61,7 @@ sequenceDiagram
     User->>Browser: Clicks "Increment" button
     Browser->>Handler: Executes callback function
     
-    rect rgb(240, 240, 240)
+    rect rgb(220, 235, 255)
         Note over Handler: Synchronous Execution Block
         Handler->>React: setCount(prev + 1)
         Note right of React: Update is queued, not applied yet
