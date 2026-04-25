@@ -34,6 +34,16 @@
           "commit": "a3ea33fe018016101d7c268cdc7b06f6350613e7"
         },
         {
+          "title": "The State-Event Loop",
+          "type": "instruction",
+          "path": "instruction/the-state-event-loop/the-state-event-loop.md",
+          "id": "6320c343-4f45-454c-9fe1-b53307423ae7",
+          "state": "published",
+          "interactions": [],
+          "description": "Describe the relationship between user events, state updates, and the React re-render cycle.",
+          "commit": "31d4df2183540b120ee12bc64d057a7d009a2e92"
+        },
+        {
           "title": "Understanding useState as an Event Listener",
           "type": "instruction",
           "path": "instruction/understanding-usestate-as-an-event-listener/understanding-usestate-as-an-event-listener.md",
@@ -80,16 +90,6 @@
           "id": "c790200e-fdc7-4c15-bb60-85c3603e761a",
           "state": "stub",
           "description": "Provide a practical guide on managing keyboard, mouse, and touch events within a React application."
-        },
-        {
-          "title": "The State-Event Loop",
-          "type": "instruction",
-          "path": "instruction/the-state-event-loop/the-state-event-loop.md",
-          "id": "6320c343-4f45-454c-9fe1-b53307423ae7",
-          "state": "published",
-          "interactions": [],
-          "description": "Describe the relationship between user events, state updates, and the React re-render cycle.",
-          "commit": "31d4df2183540b120ee12bc64d057a7d009a2e92"
         },
         {
           "title": "Batching State Updates for Performance",
