@@ -19,15 +19,18 @@
           "path": "instruction/asynchronous-browser-events/asynchronous-browser-events.md",
           "id": "b66bd4ff-7a7d-480e-a5cb-5aa6bd13ef60",
           "state": "published",
-          "interactions": [],
+          "interactions": [
+            "fe720d1a-164c-48c0-a59a-eaedb5f72d28"
+          ],
           "description": "Cover how the browser and V8 process the asynchronous events. Include a discussion on the stack frame, web apis, macro and micro tasks, and the rendering loop.",
-          "commit": "b5397f62254e3600567bfc17dc470455caa07b5e"
+          "commit": "c20b16aac7a6dfb74052de0067841e7df69f3a7d"
         },
         {
           "title": "Async browser demo",
           "type": "embedded",
           "path": "https://leesjensen.com/demo/asyncFlow.html",
           "id": "4717f535-dea6-49f3-b563-6fb0eeeb653d",
+          "state": "published",
           "description": "https://leesjensen.com/demo/asyncFlow.html"
         },
         {
