@@ -18,6 +18,7 @@
           "type": "instruction",
           "path": "instruction/asynchronous-browser-events/asynchronous-browser-events.md",
           "id": "b66bd4ff-7a7d-480e-a5cb-5aa6bd13ef60",
+          "state": "published",
           "interactions": [],
           "description": "Cover how the browser and V8 process the asynchronous events. Include a discussion on the stack frame, web apis, macro and micro tasks, and the rendering loop.",
           "commit": "b5397f62254e3600567bfc17dc470455caa07b5e"
@@ -31,16 +32,6 @@
           "interactions": [],
           "description": "Explain the fundamental concepts of asynchronous event-driven programming and how they differ from synchronous execution in the context of React.",
           "commit": "a3ea33fe018016101d7c268cdc7b06f6350613e7"
-        },
-        {
-          "title": "The State-Event Loop",
-          "type": "instruction",
-          "path": "instruction/the-state-event-loop/the-state-event-loop.md",
-          "id": "6320c343-4f45-454c-9fe1-b53307423ae7",
-          "state": "published",
-          "interactions": [],
-          "description": "Describe the relationship between user events, state updates, and the React re-render cycle.",
-          "commit": "31d4df2183540b120ee12bc64d057a7d009a2e92"
         },
         {
           "title": "Understanding useState as an Event Listener",
@@ -89,6 +80,16 @@
           "id": "c790200e-fdc7-4c15-bb60-85c3603e761a",
           "state": "stub",
           "description": "Provide a practical guide on managing keyboard, mouse, and touch events within a React application."
+        },
+        {
+          "title": "The State-Event Loop",
+          "type": "instruction",
+          "path": "instruction/the-state-event-loop/the-state-event-loop.md",
+          "id": "6320c343-4f45-454c-9fe1-b53307423ae7",
+          "state": "published",
+          "interactions": [],
+          "description": "Describe the relationship between user events, state updates, and the React re-render cycle.",
+          "commit": "31d4df2183540b120ee12bc64d057a7d009a2e92"
         },
         {
           "title": "Batching State Updates for Performance",
