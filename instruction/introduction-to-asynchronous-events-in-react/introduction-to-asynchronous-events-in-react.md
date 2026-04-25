@@ -48,7 +48,7 @@ If you click the button, the console will log `0`, even though the UI will event
 
 
 ```mermaid
-%%{init: {'theme': 'neutral'}}%%
+%%{init: { 'theme': 'neutral', 'themeVariables': { 'lineColor': '#000000', 'primaryTextColor': '#000000', 'actorBorder': '#000000', 'participantBorder': '#000000', 'noteBorderColor': '#000000' } }}%%
 
 sequenceDiagram
     autonumber
