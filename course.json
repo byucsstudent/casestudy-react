@@ -98,6 +98,13 @@
           "id": "f64e2ee3-5d22-41b3-9748-446bfa45a069",
           "state": "stub",
           "description": "Explain how React batches multiple state updates from a single event to optimize rendering performance."
+        },
+        {
+          "title": "Async browser demo",
+          "type": "embedded",
+          "path": "https://leesjensen.com/demo/asyncFlow.html",
+          "id": "4717f535-dea6-49f3-b563-6fb0eeeb653d",
+          "description": "https://leesjensen.com/demo/asyncFlow.html"
         }
       ]
     },
