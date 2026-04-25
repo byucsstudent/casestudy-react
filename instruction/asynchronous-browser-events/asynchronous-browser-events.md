@@ -4,6 +4,8 @@ To understand how React manages state and triggers updates, we must first peel b
 
 At the heart of this complexity is a fundamental paradox: JavaScript is single-threaded, meaning it can only execute one piece of code at a time. Yet, modern web applications handle thousands of concurrent tasks—tracking mouse movements, fetching data from servers, and running complex animations—all without freezing the user interface. This seamless experience is made possible by the Asynchronous Event Loop, a mechanism that allows the browser to offload heavy lifting and return to the main execution thread only when necessary.
 
+![asyncBrowserProcessing.png](asyncBrowserProcessing.png)
+
 ### The Execution Stack and the V8 Engine
 
 When you run a JavaScript function, it enters the **Call Stack**. The stack follows a Last-In, First-Out (LIFO) principle. Every time a function is called, a "stack frame" is created containing the function's arguments and local variables. When the function returns, its frame is popped off the stack.
