@@ -23,7 +23,7 @@
             "fe720d1a-164c-48c0-a59a-eaedb5f72d28"
           ],
           "description": "Cover how the browser and V8 process the asynchronous events. Include a discussion on the stack frame, web apis, macro and micro tasks, and the rendering loop.",
-          "commit": "c20b16aac7a6dfb74052de0067841e7df69f3a7d"
+          "commit": "3dcc0ab4e71cbf9592acfe9a8695b5ccc356b075"
         },
         {
           "title": "Async browser demo",
