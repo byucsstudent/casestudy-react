@@ -18,6 +18,8 @@ The V8 engine (used in Chrome and Edge) does not actually contain timers like `s
 
 When you call `setTimeout(() => { ... }, 1000)`, V8 pushes the call to the stack, triggers the browser's internal timer, and then immediately pops the call off the stack. The JavaScript engine is now free to do other things while the browser’s timer counts down in the background. Once the timer expires, the browser doesn't just shove the callback function back onto the stack; it places it into a queue, waiting for its turn to be processed.
 
+![setTimeoutFlow.png](setTimeoutFlow.png)
+
 ### The Event Loop and Task Management
 
 The Event Loop is a constant process that monitors two things: the Call Stack and the Task Queues. Its job is simple: if the Call Stack is empty, it takes the first task from the queue and pushes it onto the stack for execution.
