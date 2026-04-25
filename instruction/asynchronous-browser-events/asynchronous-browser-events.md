@@ -120,6 +120,18 @@ The browser’s ability to handle asynchronous events is a carefully balanced ac
 
 For a React developer, these concepts are foundational. React’s "Fiber" architecture and its scheduling of state updates are essentially sophisticated ways of working within these browser constraints to ensure that high-priority tasks (like typing) are never blocked by lower-priority tasks (like rendering a large list).
 
+
+```masteryls
+{"id":"fe720d1a-164c-48c0-a59a-eaedb5f72d28", "title":"Purpose of Macro and Microtask Queues", "type":"multiple-choice"}
+In the context of the browser's event loop and V8 engine, why does the architecture distinguish between a macrotask (Task) queue and a microtask queue?
+
+- [ ] To allow the browser to move long-running JavaScript execution to a background thread while the microtask queue handles UI updates on the main thread.
+- [x] To ensure high-priority actions, such as Promise resolutions, are executed immediately after the current execution context finishes but before the browser performs rendering or picks up the next external event.
+- [ ] To prevent the call stack from overflowing by automatically moving recursive function calls into the microtask queue instead of the stack frame.
+- [ ] To ensure that Web API callbacks, such as `setTimeout` or `setInterval`, are given higher execution priority than internal state changes to maintain a consistent frame rate.
+```
+
+
 ***
 
 **Deep Dive Resources:**
